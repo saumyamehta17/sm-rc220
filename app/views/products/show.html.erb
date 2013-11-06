@@ -1,0 +1,14 @@
+<div style="margin-top:10%;	"></div>
+<table align="center" cellpadding=10 cellspacing=5 border=1>
+  <th>Name</th>
+  <th>QTY</th>
+  <th>Unit Price</th>
+  <tr>
+   <td><%= @product.name %></td>
+   <td><%= @product.quantity %></td> 
+   <td><%= @product.price %></td>
+  </tr>
+</table>
+<%= link_to "Printable Document(PDF)" ,product_path(@product, format: "pdf") %>
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
